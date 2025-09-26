@@ -25,3 +25,4 @@ VALIDATE $? "Copying nginx.conf"
 
 systemctl restart nginx 
 VALIDATE $? "Restarting Nginx"
+print_total_time
