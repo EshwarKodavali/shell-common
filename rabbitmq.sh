@@ -2,8 +2,10 @@
 
 source ./common.sh
 APP_NAME=rabbitmq
+
 check_root
-cp $SCRIPT_DIR/rabbitmq.repo /etc/yum.repos.d/rabbitmq.repo &>>$LOG_FILE
+
+cp $HOME_PATH/rabbitmq.repo /etc/yum.repos.d/rabbitmq.repo &>>$LOG_FILE
 VALIDATE $? "Adding RabbitMQ repo"
 dnf install rabbitmq-server -y &>>$LOG_FILE
 VALIDATE $? "Installing RabbitMQ Server"
