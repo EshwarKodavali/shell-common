@@ -9,6 +9,8 @@ START_TIME=$(date +%s)
 LOG_FOLDER="/var/log/shell-roboshop"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME.log"
+HOME_PATH=$PWD
+
 
 mkdir -p $LOG_FOLDER
 
